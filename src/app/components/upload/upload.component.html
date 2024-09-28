@@ -1,0 +1,20 @@
+<!-- src/app/components/upload/upload.component.html -->
+
+<div class="upload-container">
+  <h2>Upload a 3D Model</h2>
+  <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+    <div class="p-field">
+      <label for="name">Model Name</label>
+      <input id="name" type="text" pInputText [(ngModel)]="model.name" name="name" required />
+    </div>
+    <div class="p-field">
+      <label for="thumbnail">Thumbnail Image</label>
+      <input id="thumbnail" type="file" (change)="onThumbnailSelected($event)" required />
+    </div>
+    <div class="p-field">
+      <label for="modelFile">3D Model File</label>
+      <input id="modelFile" type="file" (change)="onModelSelected($event)" required />
+    </div>
+    <button pButton type="submit" label="Upload" [disabled]="!uploadForm.form.valid"></button>
+  </form>
+</div>

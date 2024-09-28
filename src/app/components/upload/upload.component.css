@@ -1,0 +1,19 @@
+/* src/app/components/upload/upload.component.css */
+
+.upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.p-field {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+/* src/app/components/model-gallery/model-gallery.component.css */
+
+.ui-card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers the content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers child elements horizontally */
+}
+
+.image-container {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  overflow: hidden; /* Hide any overflow */
+  margin-bottom: 1rem; /* Adds space below the image */
+}
+
+.model-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}

@@ -1,0 +1,11 @@
+/* src/app/components/model-viewer/model-viewer.component.css */
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+model-viewer {
+  display: block;
+  margin: 0 auto;
+}

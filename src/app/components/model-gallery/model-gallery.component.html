@@ -1,0 +1,23 @@
+<!-- src/app/components/model-gallery/model-gallery.component.html -->
+
+<div class="p-grid">
+  <ng-container *ngIf="models$ | async as models; else loading">
+    <div class="p-col-12 p-md-4" *ngFor="let model of models">
+      <p-card header="{{ model.name }}" styleClass="ui-card-shadow">
+        <img [ngSrc]="model.thumbnail"
+             width="200"
+             height="222"
+             alt="Thumbnail of {{ model.name }}"
+             class="model-thumbnail"
+             priority />
+        <!-- Using <a> tag with pButton and routerLink -->
+        <button pButton type="button" label="View Model" icon="pi pi-eye" [routerLink]="['/model', model.id]"></button>
+      </p-card>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <div class="p-col-12">
+      <p-progressSpinner></p-progressSpinner>
+    </div>
+  </ng-template>
+</div>
